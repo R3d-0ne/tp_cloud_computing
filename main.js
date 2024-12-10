@@ -6,11 +6,13 @@ console.log("Target environment", env)
 
 const compartmentName = [env,"pulumi", "tp"].join("-")
 const freeformTags = {
-	"createdBy": "Pulumi",
-	"environment": env,
-	"createdOn": new Date().toISOString(),
-	"repostiory": "https://github.com/R3d-0ne/tp_cloud_computing.git"
+	"CreatedBy": "Pulumi",
+	"Environment": env,
+	"CreatedOn": new Date().toISOString(),
+	"Repostiory": "https://github.com/R3d-0ne/tp_cloud_computing.git"
 }
+console.log("Compartment name", compartmentName)
+console.log(freeformTags)
 
 const compartment = new oci.identity.Compartment(compartmentName, {
 	name: compartmentName,
@@ -19,5 +21,6 @@ const compartment = new oci.identity.Compartment(compartmentName, {
 	FreeformTags: freeformTags
 
 })
+console.log("Compartment", compartment)
 
 exports.compartmentId = compartment.id
