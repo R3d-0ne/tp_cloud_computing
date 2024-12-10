@@ -16,9 +16,7 @@ const compartment = new oci.identity.Compartment(compartmentName, {
 	name: compartmentName,
 	description: "Compartment for Pulumi resources",
 	enableDelete: true,
-	FreeformTags: {
-
-	}
+	FreeformTags: freeformTags
 
 })
 
