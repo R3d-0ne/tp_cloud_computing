@@ -9,7 +9,7 @@ const freeformTags = {
 	"createdBy": "Pulumi",
 	"environment": env,
 	"createdOn": new Date().toISOString(),
-	"repostiory": "
+	"repostiory": "https://github.com/R3d-0ne/tp_cloud_computing.git"
 }
 
 const compartment = new oci.identity.Compartment(compartmentName, {
